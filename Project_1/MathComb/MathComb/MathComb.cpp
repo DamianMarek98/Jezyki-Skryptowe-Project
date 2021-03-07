@@ -3,9 +3,24 @@
 
 #include <iostream>
 
+int factorial(int n) 
+{
+    int result = 1;
+    for (int i = 1; i <= n; i++) {
+        result *= i;
+    }
+
+    return result;
+}
+
+int mathComb(int n, int k)
+{
+    return factorial(n) / (factorial(k) * factorial(n - k));
+}
+
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::cout << mathComb(10, 4);
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
