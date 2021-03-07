@@ -1,5 +1,16 @@
+import math
+import time
+
+test_file = "C://Users//zmddd//Desktop/Studia//Mgr Sem I//Jezyki-Skryptowe-Project//Project_1//test.txt"
+result_file_impl = "C://Users//zmddd//Desktop/Studia//Mgr Sem I//Jezyki-Skryptowe-Project//Project_1//results_py_impl_comb.txt"
+result_file_lib = "C://Users//zmddd//Desktop/Studia//Mgr Sem I//Jezyki-Skryptowe-Project//Project_1//results_py_lib_comb.txt"
+
+
 def math_comb(n, k):
-    return factorial(n) / (factorial(k) * factorial(n - k))
+    if (k > n):
+        return 0
+    else:
+        return factorial(n) / (factorial(k) * factorial(n - k))
 
 
 def factorial(n):
@@ -9,6 +20,37 @@ def factorial(n):
 
     return result
 
-print('xd')
-print(math_comb(10, 4))
 
+def test_function(impl=False):
+    with open(result_file_impl if impl else result_file_lib, 'w') as out_file:
+        file = open(test_file, 'r')
+        lines = file.readlines()
+        for line in lines:
+            values = line.split(", ")
+            n = int(values[0])
+            k = int(values[1])
+            expected_res = int(values[2])
+            time1 = time.perf_counter()
+            res = 0
+            if (impl) :
+                for i in range(0, 100):
+                    res = int(math_comb(n, k))
+            else:
+                for i in range(0, 1000):
+                    res = math.comb(n, k)
+            time2 = time.perf_counter()
+            if (res != expected_res):
+                print("Result not the same as expected! case n = " + str(n) + " k= " + str(k) + " impl = " + str(impl))
+            out_file.write('n = ' + str(n) + ', k = ' + str(k) + ', res = ' + str(res) + " time: " + str((time2 - time1) * 10000) + 's\n')
+
+
+def generate_all_possible_cases():
+    with open(test_file, 'w') as file:
+        for n in range(1, 13):  # 12! max Integer value
+            for k in range(1, n + 2):
+                file.write(str(n) + ', ' + str(k) + ', ' + str(math.comb(n, k)) + '\n')
+
+
+generate_all_possible_cases()
+test_function()
+test_function(True)
