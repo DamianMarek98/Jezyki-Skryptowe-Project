@@ -58,7 +58,7 @@ void test() {
 
         clock_t start, end;
         ClockTime start_time = Clock::now();
-        for (int i = 0; i < 10000000; i++) {
+        for (int i = 0; i < 1000000000; i++) {
             counted_res = mathComb(n, k);
         }
         ClockTime end_time = Clock::now();
@@ -69,7 +69,7 @@ void test() {
 
         auto execution_time_sec = duration_cast<seconds>(end_time - start_time).count();
         auto execution_time_ms = duration_cast<milliseconds>(end_time - start_time).count();
-        out_file << "n = " << n << " k = " << k << " res = " << counted_res << " time: " << execution_time_sec << "," << execution_time_ms << endl;
+        out_file << "n = " << n << " k = " << k << " res = " << counted_res << " time: " << execution_time_sec << "s, " << execution_time_ms << "ms" << endl;
     }
     out_file.close();
     data.close();
@@ -80,4 +80,3 @@ int main()
     test();
 }
 
-//max: 12 silnia

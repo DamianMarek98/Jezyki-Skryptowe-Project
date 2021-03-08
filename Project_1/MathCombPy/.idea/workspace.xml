@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3ac333e-c635-491f-bff2-c91d2e780eaa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/MathCombPy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MathCombPy.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main" beforeDir="false" afterPath="$PROJECT_DIR$/Main" afterDir="false" />
     </list>
@@ -104,6 +102,7 @@
       <workItem from="1615115139903" duration="1219000" />
       <workItem from="1615135651861" duration="1525000" />
       <workItem from="1615142839875" duration="8748000" />
+      <workItem from="1615224797042" duration="1028000" />
     </task>
     <servers />
   </component>
@@ -140,7 +139,7 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/MathCombPy$Main.coverage" NAME="Main Coverage Results" MODIFIED="1615154613016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MathCombPy$Main.coverage" NAME="Main Coverage Results" MODIFIED="1615225846941" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Main">
