@@ -5,6 +5,10 @@ test_file = "C://Users//zmddd//Desktop/Studia//Mgr Sem I//Jezyki-Skryptowe-Proje
 result_file_impl = "C://Users//zmddd//Desktop/Studia//Mgr Sem I//Jezyki-Skryptowe-Project//Project_1//results_py_impl_comb.txt"
 result_file_lib = "C://Users//zmddd//Desktop/Studia//Mgr Sem I//Jezyki-Skryptowe-Project//Project_1//results_py_lib_comb.txt"
 
+class comb_data:
+    def __init__(self, n, k):
+        self.n = n
+        self.k = k
 
 def math_comb(n, k):
     if (k > n):
@@ -19,6 +23,45 @@ def factorial(n):
         result = result * i
 
     return result
+
+def test_time_impl():
+    file = open(test_file, 'r')
+    lines = file.readlines()
+    data = []
+    for line in lines:
+        values = line.split(", ")
+        data.append(comb_data(int(values[0]), int(values[1])))
+
+    n = 500000
+    start_time = time.time()
+    for i in range(0, n):
+        pass
+        # for elem in data:
+        #     math_comb(elem.n, elem.k)
+
+    elapsed_time = time.time() - start_time
+
+    print("Implementation test n = " + str(n) + "; time = " + str(elapsed_time) + "s")
+
+
+def test_time_lib():
+    file = open(test_file, 'r')
+    lines = file.readlines()
+    data = []
+    for line in lines:
+        values = line.split(", ")
+        data.append(comb_data(int(values[0]), int(values[1])))
+
+    n = 4000000
+    start_time = time.time()
+    for i in range(0, n):
+        pass
+        # for elem in data:
+        #     math.comb(elem.n, elem.k)
+
+    elapsed_time = time.time() - start_time
+
+    print("Lib test n = " + str(n) + "; time = " + str(elapsed_time) + "s")
 
 
 def test_function(impl=False):
@@ -41,16 +84,16 @@ def test_function(impl=False):
             time2 = time.perf_counter()
             if (res != expected_res):
                 print("Result not the same as expected! case n = " + str(n) + " k= " + str(k) + " impl = " + str(impl))
-            out_file.write('n = ' + str(n) + ', k = ' + str(k) + ', res = ' + str(res) + " time: " + str((time2 - time1) * 10000) + 's\n')
+            out_file.write('n = ' + str(n) + ', k = ' + str(k) + ', res = ' + str(res) + " time: " + str((time2 - time1)) + 's\n')
 
 
 def generate_all_possible_cases():
     with open(test_file, 'w') as file:
-        for n in range(1, 13):  # 12! max Integer value
-            for k in range(1, n + 1):
+        for n in range(0, 21):  # 20! max Integer value
+            for k in range(0, n + 2):
                 file.write(str(n) + ', ' + str(k) + ', ' + str(math.comb(n, k)) + '\n')
 
 
 generate_all_possible_cases()
-test_function()
-test_function(True)
+test_time_impl()
+test_time_lib()
