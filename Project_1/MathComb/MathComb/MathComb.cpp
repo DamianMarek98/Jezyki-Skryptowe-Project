@@ -99,7 +99,7 @@ void measureTime() {
     }
 
     time_t begin, end;
-    int n = 4000000;
+    int n = 8000000;
     int64_t res;
     ClockTime start_time = Clock::now();
     time(&begin);
