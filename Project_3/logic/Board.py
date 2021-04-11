@@ -10,7 +10,7 @@ class Board():
         self.x: int = x
         self.y: int = y
         self.turn = 0
-        self.fields = [[Field.EMPTY for i in range(x)] for j in range(y)]  # todo check if it works
+        self.fields = [[Field.EMPTY for i in range(x)] for j in range(y)]
         self.base_fields = [[Field.EMPTY for i in range(x)] for j in range(y)]
         self.player_pos_x = 0
         self.player_pos_y = 0
@@ -128,7 +128,7 @@ class Board():
         self.x = x
         self.y = y
         self.turn = 0
-        self.fields = [[Field.EMPTY for i in range(x)] for j in range(y)]  # todo check if it works
+        self.fields = [[Field.EMPTY for i in range(x)] for j in range(y)]
         self.base_fields = [[Field.EMPTY for i in range(x)] for j in range(y)]
         self.player_pos_x = 0
         self.player_pos_y = 0
