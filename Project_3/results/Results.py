@@ -1,15 +1,31 @@
 import os
+from copy import copy
 from enum import Enum
 from pathlib import Path
 from logic.Enums import *
 
-from logic.Mappers import map_game_board_to_result_file_name
+from logic.Mappers import *
 
 
 class Results():
 
+    def reset_results(self):  # todo test
+        file_name: str = map_game_board_to_result_file_name(GameBoard.EASY)
+        if file_name != "":
+            with open(os.path.dirname(Path(__file__).parent) + '\\results\\' + file_name, "w") as file:
+                file.close()
+
+        file_name = map_game_board_to_result_file_name(GameBoard.MED)
+        if file_name != "":
+            with open(os.path.dirname(Path(__file__).parent) + '\\results\\' + file_name, "w") as file:
+                file.close()
+
+        file_name = map_game_board_to_result_file_name(GameBoard.HARD)
+        if file_name != "":
+            with open(os.path.dirname(Path(__file__).parent) + '\\results\\' + file_name, "w") as file:
+                file.close()
+
     def write_result(self, game_board: GameBoard, time: float):
-        from logic.Mappers import map_game_board_to_file_name
         file_name: str = map_game_board_to_result_file_name(game_board)
         res: list = self.get_results(file_name)
         for res_elem in res:
@@ -30,8 +46,27 @@ class Results():
 
             file.close()
 
-    def get_results(self, game_board: GameBoard) -> list:
-        return self.get_results(self.map_game_board_to_result_file_name(game_board))
+    def get_results_text(self) -> str:
+        text: str = "Plansza łatwa:\n"
+        text += self.add_board_results(GameBoard.EASY)
+        text += "\nPlansza średnia:\n"
+        text += self.add_board_results(GameBoard.MED)
+        text += "\nPlansza trudna:\n"
+        text += self.add_board_results(GameBoard.HARD)
+
+        return text
+
+    def add_board_results(self,game_board: GameBoard) -> str:
+        text: str = ""
+        iter = 0
+        for res in self.get_results(map_game_board_to_result_file_name(game_board)):
+            iter += 1
+            text += str(iter) + ". " + str(res) + "\n"
+
+        for iter in range(iter + 1, 4):
+            text += str(iter) + ".\n"
+
+        return text
 
     def get_results(self, file_name: str) -> list:
         results = []
@@ -43,5 +78,4 @@ class Results():
                 file.close()
 
         return results
-
 
