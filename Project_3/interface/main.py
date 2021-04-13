@@ -612,9 +612,6 @@ class Application(Gtk.Application):
 
         # my setup
         self.playing: bool = False
-        # self.timer = QTimer(MainWindow) todo
-        # self.timer.timeout.connect(self.show_time)
-        # self.timer.start(100)
         GLib.timeout_add(100, self.show_time)
         self.time = 0
         self.player_can_move = True
