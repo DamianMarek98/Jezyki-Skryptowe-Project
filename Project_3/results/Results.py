@@ -1,15 +1,14 @@
 import os
-from copy import copy
 from enum import Enum
 from pathlib import Path
 from logic.Enums import *
 
-from logic.Mappers import *
+from logic.Mappers import map_game_board_to_result_file_name
 
 
 class Results():
 
-    def reset_results(self):  # todo test
+    def reset_results(self):
         file_name: str = map_game_board_to_result_file_name(GameBoard.EASY)
         if file_name != "":
             with open(os.path.dirname(Path(__file__).parent) + '\\results\\' + file_name, "w") as file:

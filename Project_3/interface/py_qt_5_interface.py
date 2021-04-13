@@ -1,4 +1,5 @@
 import copy
+from copyreg import pickle
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.Qt import Qt, QTimer
@@ -126,7 +127,7 @@ class Ui_MainWindow(object):
         self.win_label.setStyleSheet("color: green")
         self.win_label.move((MainWindow.window().width() - self.win_label.width()) / 2, 42)
         self.win_label.hide()
-        self.horizontal_group_box = QGroupBox(map_game_board_to_level_name(self.game_board))
+        self.horizontal_group_box = QGroupBox("")
         MainWindow.layout().addWidget(self.horizontal_group_box)
         self.print_board()
 
@@ -275,7 +276,7 @@ class Ui_MainWindow(object):
     #prints board on it's grid
     def print_board(self):
         MainWindow.layout().removeWidget(self.horizontal_group_box)
-        self.horizontal_group_box = QGroupBox(map_game_board_to_level_name(self.game_board))
+        self.horizontal_group_box = QGroupBox("")
         layout = QGridLayout()
         for i in range(0, self.board.get_x()):
             for j in range(0, self.board.get_y()):

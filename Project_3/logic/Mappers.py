@@ -1,4 +1,4 @@
-from results.Results import GameBoard
+from logic.Enums import GameBoard
 
 
 def map_game_board_to_result_file_name(game_board: GameBoard) -> str:
