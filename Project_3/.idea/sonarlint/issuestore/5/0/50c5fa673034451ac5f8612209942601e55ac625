@@ -1,0 +1,18 @@
+
+rpython:S116"TRename this field "pushButton_2" to match the regular expression ^[_a-z][_a-z0-9]*$.(îô‡8øÍ•¼Œ/
+vpython:S116"XRename this field "verticalLayout_2" to match the regular expression ^[_a-z][_a-z0-9]*$.(ÓùèÕ8øÍ•¼Œ/
+vpython:S1165"XRename this field "horizontalLayout" to match the regular expression ^[_a-z][_a-z0-9]*$.(±·ÊÀ8øÍ•¼Œ/
+wpython:S116&"TRename this field "pushButton_3" to match the regular expression ^[_a-z][_a-z0-9]*$.(ÄŒïıÿÿÿÿ8øÍ•¼Œ/
+ppython:S116)"RRename this field "pushButton" to match the regular expression ^[_a-z][_a-z0-9]*$.(»’®Ù8øÍ•¼Œ/
+ypython:S117"VRename this parameter "MainWindow" to match the regular expression ^[_a-z][a-z0-9_]*$.(ÂéÇ´ÿÿÿÿÿ8øÍ•¼Œ/
+npython:S100"KRename method "setupUi" to match the regular expression ^[a-z_][a-z0-9_]*$.(ÂéÇ´ÿÿÿÿÿ8øÍ•¼Œ/
+tpython:S100P"QRename method "retranslateUi" to match the regular expression ^[a-z_][a-z0-9_]*$.(”«Àşÿÿÿÿ8øÍ•¼Œ/
+ypython:S117P"VRename this parameter "MainWindow" to match the regular expression ^[_a-z][a-z0-9_]*$.(”«Àşÿÿÿÿ8øÍ•¼Œ/
+rpython:S116"TRename this field "pushButton_7" to match the regular expression ^[_a-z][_a-z0-9]*$.(Û£¹8øÍ•¼Œ/
+wpython:S116 "TRename this field "pushButton_8" to match the regular expression ^[_a-z][_a-z0-9]*$.(µİÙÁşÿÿÿÿ8øÍ•¼Œ/
+rpython:S116,"TRename this field "pushButton_5" to match the regular expression ^[_a-z][_a-z0-9]*$.(¬èô‘8øÍ•¼Œ/
+python:S116"\Rename this field "verticalLayoutWidget" to match the regular expression ^[_a-z][_a-z0-9]*$.(¥ğ¹ğüÿÿÿÿ8øÍ•¼Œ/
+rpython:S116#"TRename this field "pushButton_4" to match the regular expression ^[_a-z][_a-z0-9]*$.(¥š«¼8øÍ•¼Œ/
+python:S1162"^Rename this field "horizontalLayoutWidget" to match the regular expression ^[_a-z][_a-z0-9]*$.(ÙóÜÒûÿÿÿÿ8øÍ•¼Œ/
+wpython:S116/"TRename this field "pushButton_6" to match the regular expression ^[_a-z][_a-z0-9]*$.(äÍ’‰şÿÿÿÿ8øÍ•¼Œ/
+Špython:S101"gRename class "Ui_MainWindow" to match the regular expression ^_?([A-Z_][a-zA-Z0-9]*|[a-z_][a-z0-9_]*)$.( Ìñıùÿÿÿÿ8øÍ•¼Œ/

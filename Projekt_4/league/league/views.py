@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic.list import ListView
+from .forms import RegisterForm
 
 from .models import Team
 
@@ -9,17 +10,20 @@ def index(request):
 
 
 def login(request):
-    if request.user.is_authenticated:
-        return render(request, 'league/login.html')
-    else:
-        return index(request)
+    return render(request, 'league/login.html')
 
 
-def register(request):
-    if request.user.is_authenticated:
-        return render(request, 'league/register.html')
-    else:
-        return index(request)
+def register(response):
+    form = None
+    if response.method == "POST":
+        form = RegisterForm(response.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("/login")
+
+    if form == None:
+        form = RegisterForm()
+    return render(response, 'league/register.html', {'form': form})
 
 
 class Table(ListView):

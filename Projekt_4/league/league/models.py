@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.contrib.postgres.fields import ArrayField
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 
 class Team(models.Model):
@@ -9,7 +11,7 @@ class Team(models.Model):
 
 
 class Player(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     team = models.ForeignKey(Team, on_delete=models.SET_NULL, null=True, blank=True)
     number = models.IntegerField(null=True)
 
@@ -24,4 +26,13 @@ class Comment(models.Model):
     date_created = models.DateTimeField(auto_now_add=True, null=False)
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     match = models.ForeignKey(Match, on_delete=models.SET_NULL, null=True, blank=True)
+
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        Player.objects.create(user=instance)
+
+@receiver(post_save, sender=User)
+def save_user_profile(sender, instance, **kwargs):
+    instance.player.save()
 

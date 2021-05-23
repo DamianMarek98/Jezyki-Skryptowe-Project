@@ -1,0 +1,16 @@
+
+Jpython:S1481"%Remove the unused local variable "i".(õÄ”ûüÿÿÿÿ8¾‹·ÔŒ/
+Jpython:S1481"%Remove the unused local variable "j".(ú¥¶Šÿÿÿÿÿ8¾‹·ÔŒ/
+Cpython:S125²"Remove this commented out code.(ˆÛÅÍûÿÿÿÿ8©ûŠÄŒ/
+}python:S117Ù"YRename this local variable "pozycjaY" to match the regular expression ^[_a-z][a-z0-9_]*$.(ø¼¾úÿÿÿÿ8ÈåøÔŒ/
+Jpython:S1481"%Remove the unused local variable "i".(ú¥¶Šÿÿÿÿÿ8¾‹·ÔŒ/
+Jpython:S1481„"%Remove the unused local variable "j".(ú¥¶Šÿÿÿÿÿ8¾‹·ÔŒ/
+Jpython:S1481ƒ"%Remove the unused local variable "i".(õÄ”ûüÿÿÿÿ8¾‹·ÔŒ/
+Jpython:S1481„"%Remove the unused local variable "i".(ú¥¶Šÿÿÿÿÿ8¾‹·ÔŒ/
+npython:S1192Ã"NDefine a constant instead of duplicating this literal '..\\results\\' 5 times.(öóÓ¨8ª£¿ÔŒ/
+Jpython:S1481"%Remove the unused local variable "j".(õÄ”ûüÿÿÿÿ8¾‹·ÔŒ/
+lpython:S1192¸"GDefine a constant instead of duplicating this literal "Czas: " 4 times.(†ŸË€øÿÿÿÿ8õÇâÖŒ/
+Jpython:S1481ƒ"%Remove the unused local variable "j".(õÄ”ûüÿÿÿÿ8¾‹·ÔŒ/
+qpython:S1192"QDefine a constant instead of duplicating this literal "Plansza: poziom " 3 times.(®°–¡8õÉ¬×Œ/
+xpython:S117Ø"YRename this local variable "pozycjaX" to match the regular expression ^[_a-z][a-z0-9_]*$.(ä¨õ8ÈåøÔŒ/
+Ppython:S5806ñ"+Rename this variable; it shadows a builtin.(ÅˆŸšüÿÿÿÿ8ª£¿ÔŒ/

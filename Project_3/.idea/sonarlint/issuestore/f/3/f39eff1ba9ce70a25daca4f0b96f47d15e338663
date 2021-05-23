@@ -1,0 +1,10 @@
+
+ypython:S117"VRename this parameter "MainWindow" to match the regular expression ^[_a-z][a-z0-9_]*$.(ÂéÇ´ÿÿÿÿÿ8–©À†Œ/
+Špython:S101"gRename class "Ui_MainWindow" to match the regular expression ^_?([A-Z_][a-zA-Z0-9]*|[a-z_][a-z0-9_]*)$.( Ìñıùÿÿÿÿ8ªÁ†Œ/
+vpython:S116^"XRename this field "horizontalLayout" to match the regular expression ^[_a-z][_a-z0-9]*$.(±·ÊÀ8–©À†Œ/
+python:S116["^Rename this field "horizontalLayoutWidget" to match the regular expression ^[_a-z][_a-z0-9]*$.(ÙóÜÒûÿÿÿÿ8–©À†Œ/
+vpython:S1192Õ"QDefine a constant instead of duplicating this literal "Plansza: poziom " 3 times.(Ş×ù‡şÿÿÿÿ8™áÉ´Œ/
+upython:S117³"VRename this parameter "MainWindow" to match the regular expression ^[_a-z][a-z0-9_]*$.(úåŸ8–©À†Œ/
+npython:S100"KRename method "setupUi" to match the regular expression ^[a-z_][a-z0-9_]*$.(ÂéÇ´ÿÿÿÿÿ8–©À†Œ/
+lpython:S1192´"GDefine a constant instead of duplicating this literal "Czas: " 4 times.(†ŸË€øÿÿÿÿ8î¹á³Œ/
+upython:S100ù"QRename method "keyPressEvent" to match the regular expression ^[a-z_][a-z0-9_]*$.(¨™”·ÿÿÿÿÿ8–©À†Œ/
